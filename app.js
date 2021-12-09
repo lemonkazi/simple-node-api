@@ -3,6 +3,7 @@ const app = express();
 const axios = require('axios');
 const qs = require('qs');
 const cors = require("cors");
+require('dotenv').config()
 
 //app.use(cors());
 app.use(express.urlencoded({ extended: true }));
@@ -14,8 +15,8 @@ app.use(express.json());
 app.get('/token', async function(req, res, next){
   try{
 
-    const client_id = '72ba43dc1ccc4afdbd8c693f0bee8068'; // Your client id
-    const client_secret = '72e14164906a49749bf1773ae9ae0e61'; // Your secret
+    const client_id = process.env.CLIENT_ID; // Your client id
+    const client_secret = process.env.CLIENT_SECRET; // Your secret
     const auth_token = Buffer.from(`${client_id}:${client_secret}`, 'utf-8').toString('base64');
 
 
