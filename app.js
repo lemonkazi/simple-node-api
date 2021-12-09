@@ -37,9 +37,9 @@ app.get('/token', async function(req, res, next){
 });
 
 
-const port = 3001;
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`App listening at http://localhost:${PORT}`);
 });
 
 
