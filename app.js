@@ -4,7 +4,7 @@ const axios = require('axios');
 const qs = require('qs');
 const cors = require("cors");
 
-app.use(cors());
+//app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -37,7 +37,7 @@ app.get('/token', async function(req, res, next){
 });
 
 
-const port = 3000;
+const port = 3001;
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
