@@ -1,10 +1,10 @@
 {
   "name": "spotify-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "spotify token and search",
   "main": "index.js",
   "engines": {
-    "node": "14.x"
+    "node": "^14.x"
   },
   "scripts": {
     "start": "node app.js",
@@ -20,7 +20,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "qs": "^6.10.2",
-    "querystring": "~0.2.0"
+    "querystring": "~0.2.0",
+    "request": "~2.83.0"
   },
   "keywords": [
     "node",
