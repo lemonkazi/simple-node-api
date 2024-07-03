@@ -21,7 +21,9 @@
     "express": "^4.17.1",
     "qs": "^6.10.2",
     "querystring": "~0.2.0",
-    "request": "~2.83.0"
+    "request": "~2.83.0",
+    "mongoose": "^5.1.5",
+    "request-promise": "^4.2.5"
   },
   "keywords": [
     "node",
