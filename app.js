@@ -14,7 +14,12 @@ app.use(express.json());
 
 app.get('/token', async function(req, res, next){
   try{
+    const apiKey = req.headers['x-api-key']; // Look for the key in headers
+    const validApiKey = process.env.LOCAL_API_KEY; // Your predefined key in env file
 
+    if (apiKey !== validApiKey) {
+      return res.status(403).send({ error: 'Forbidden: Invalid API Key' });
+    }
     const client_id = process.env.CLIENT_ID; // Your client id
     const client_secret = process.env.CLIENT_SECRET; // Your secret
     const auth_token = Buffer.from(`${client_id}:${client_secret}`, 'utf-8').toString('base64');
